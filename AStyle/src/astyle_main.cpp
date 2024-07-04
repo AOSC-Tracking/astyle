@@ -4226,13 +4226,13 @@ extern "C" EXPORT char* STDCALL AStyleMain(const char* pSourceIn,		// the source
 	{
 		out << formatter.nextLine();
 		if (formatter.hasMoreLines())
-			out << streamIterator.getOutputEOL();
+			out << streamIterator.getLastOutputEOL();
 		else
 		{
 			// this can happen if the file if missing a closing brace and break-blocks is requested
 			if (formatter.getIsLineReady())
 			{
-				out << streamIterator.getOutputEOL();
+				out << streamIterator.getLastOutputEOL();
 				out << formatter.nextLine();
 			}
 		}
