@@ -4213,7 +4213,7 @@ extern "C" EXPORT char* STDCALL AStyleMain(const char* pSourceIn,		// the source
 
 	options.importOptions(opt, optionsVector);
 
-	bool ok = options.parseOptions(optionsVector, "Invalid Artistic Style options:");
+	bool ok = options.parseOptions(optionsVector);
 	if (!ok)
 		fpErrorHandler(130, options.getOptionErrors().c_str());
 
